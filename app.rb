@@ -52,11 +52,11 @@ end
   send verb, '/play' do
     session['guessed_number'] = params['guessed_number'].to_i if params['guessed_number']
 
-    if guessed_correctly?
+   if guessed_correctly?
       erb :win
-    else
-      erb :play
-    end
+     else
+     erb :play
+   end
   end
 end
 
@@ -71,7 +71,7 @@ def no_guess_yet?
 end
 
 def set_secret_number
-  session['secret_number'] = rand(99) + 1
+  session['secret_number'] = rand(2) + 1
 end
 
 def clear_guessed_number
